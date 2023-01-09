@@ -10,18 +10,16 @@ import subprocess
 
 st.title('Streamlit matplotlib 이용 그래프에서 한글 표시 방법')
 
-st.write("네이버(하나은행 제공)에서 환율을 정보를 가져옵니다.")
-st.markdown("## 주요 통화")
-
 # 설치된 나눔 폰트 출력
-print("--> font output test3")
+st.write("설치된 나눔 폰트 출력")
 
-# temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
-# print(temp)
+temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
+st.write(temp)
 
 font_path = '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'
 font_name = font_manager.FontProperties(fname=font_path).get_name()
-print("font_name", font_name)
+st.write("font_name:", font_name)
+
 # rc('font', family=font_name)
 matplotlib.rcParams['font.family'] = font_name
 # matplotlib.rcParams['font.family'] = 'NanumGothic'
