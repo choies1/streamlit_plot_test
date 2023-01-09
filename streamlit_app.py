@@ -68,7 +68,7 @@ st.markdown("## 주요 통화")
 a = np.random.rand(100) * 100
 df = pd.DataFrame(a)
 
-plt.rcParams["font.family"] = 'NanumGothic'
+# plt.rcParams["font.family"] = 'NanumGothic'
 
 ax = df.plot(grid=True, figsize=(15, 5))
 ax.set_title("주가(종가) 그래프", fontsize=30) # 그래프 제목을 지정
