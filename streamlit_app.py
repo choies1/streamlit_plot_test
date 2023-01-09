@@ -14,7 +14,7 @@ st.write("네이버(하나은행 제공)에서 환율을 정보를 가져옵니�
 st.markdown("## 주요 통화")
 
 # 설치된 나눔 폰트 출력
-print("--> font output test2")
+print("--> font output test3")
 
 # temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 # print(temp)
