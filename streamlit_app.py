@@ -32,8 +32,14 @@ print(temp)
 temp = subprocess.call(["fc-cache","-fv"])
 print(temp)
 
-# temp = subprocess.call(["cp", "/usr/share/fonts/truetype/nanum/*.*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
+# temp = subprocess.call(["cp", "/usr/share/fonts/truetype/nanum/Nanum*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
 # print(temp)
+# cp /usr/share/fonts/truetype/nanum/Nanum* /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/
+
+from matplotlib import font_manager, rc
+font_name = font_manager.FontProperties(fname='/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf').get_name()
+rc('font', family=font_name)
+
 
 # usr/share/fonts/truetype/nanum/NanumGothic.ttf
 # sudo cp /usr/share/fonts/truetype/nanum/Nanum* /usr/local/lib/python3.4/dist-packages/matplotlib/mpl-data/fonts/ttf/
@@ -48,7 +54,7 @@ for my_font in fm.fontManager.ttflist:
 # path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 # fontprop = fm.FontProperties(fname=path)
 
-matplotlib.rcParams['font.family'] = 'NanumGothic'
+# matplotlib.rcParams['font.family'] = 'NanumGothic'
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 st.title('Streamlit matplotlib 이용 그래프에서 한글 표시 방법')
