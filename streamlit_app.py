@@ -25,7 +25,7 @@ for font in nanum_font_list:
     
 # /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
   
-temp = subprocess.call(["cd", "/usr/share/fonts/truetype/nanum/"])
+# temp = subprocess.call(["cd", "/usr/share/fonts/truetype/nanum/"])
 temp = subprocess.call(["ls","-al"])
 print(temp)
 
