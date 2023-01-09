@@ -11,17 +11,17 @@ import subprocess
 #print([f.fname for f in fm.fontManager.ttflist])
 
 # 설치된 폰트 출력
-font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
+# font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
 
-my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
+# my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 
-if my_font in font_list:
-  st.write(my_font)
+# if my_font in font_list:
+#   st.write(my_font)
 
-nanum_font_list = fm.findSystemFonts(fontpaths='/usr/share/fonts/truetype/nanum/')
+# nanum_font_list = fm.findSystemFonts(fontpaths='/usr/share/fonts/truetype/nanum/')
 
-for font in nanum_font_list:
-    print(f"Name: {fm.FontProperties(fname=font).get_name()} | Path: {font}")
+# for font in nanum_font_list:
+#     print(f"Name: {fm.FontProperties(fname=font).get_name()} | Path: {font}")
     
 # /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
   
@@ -29,8 +29,8 @@ for font in nanum_font_list:
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 print(temp)
 
-temp = subprocess.call(["fc-cache","-fv"])
-print(temp)
+# temp = subprocess.call(["fc-cache","-fv"])
+# print(temp)
 
 # temp = subprocess.call(["cp", "/usr/share/fonts/truetype/nanum/Nanum*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
 # print(temp)
@@ -38,6 +38,7 @@ print(temp)
 
 from matplotlib import font_manager, rc
 font_name = font_manager.FontProperties(fname='/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf').get_name()
+print("font_name", font_name)
 rc('font', family=font_name)
 
 
