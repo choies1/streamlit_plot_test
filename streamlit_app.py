@@ -8,6 +8,11 @@ import matplotlib.font_manager as fm
 from matplotlib import font_manager, rc
 import subprocess
 
+st.title('Streamlit matplotlib 이용 그래프에서 한글 표시 방법')
+
+st.write("네이버(하나은행 제공)에서 환율을 정보를 가져옵니다.")
+st.markdown("## 주요 통화")
+
 # 설치된 나눔 폰트 출력
 print("--> font output test2")
 
@@ -19,28 +24,8 @@ font_name = font_manager.FontProperties(fname=font_path).get_name()
 print("font_name", font_name)
 # rc('font', family=font_name)
 matplotlib.rcParams['font.family'] = font_name
-
-
-# usr/share/fonts/truetype/nanum/NanumGothic.ttf
-# sudo cp /usr/share/fonts/truetype/nanum/Nanum* /usr/local/lib/python3.4/dist-packages/matplotlib/mpl-data/fonts/ttf/
-
-# for my_font in fm.fontManager.ttflist:
-#   if 'Nanum' in my_font.name:
-#     st.write(my_font)
-  
-# for font in fm.fontManager.ttflist:
-#   print(font.fname)
-
-# fontprop = fm.FontProperties(fname=path)
-
 # matplotlib.rcParams['font.family'] = 'NanumGothic'
 matplotlib.rcParams['axes.unicode_minus'] = False
-
-st.title('Streamlit matplotlib 이용 그래프에서 한글 표시 방법')
-
-st.write("네이버(하나은행 제공)에서 환율을 정보를 가져옵니다.")
-st.markdown("## 주요 통화")
-
 
 # 선 그래프 그리기
 
