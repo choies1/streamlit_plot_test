@@ -6,3 +6,4 @@ requests
 lxml
 openpyxl
 bs4
+matplotlib
