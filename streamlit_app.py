@@ -6,8 +6,8 @@ import matplotlib
 
 import matplotlib.font_manager as fm
 
-path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
-fontprop = fm.FontProperties(fname=path)
+# path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
+# fontprop = fm.FontProperties(fname=path)
 
 matplotlib.rcParams['axes.unicode_minus'] = False
 
