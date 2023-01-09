@@ -6,6 +6,8 @@ import matplotlib
 
 import matplotlib.font_manager as fm
 
+import subprocess
+
 #print([f.fname for f in fm.fontManager.ttflist])
 
 # 설치된 폰트 출력
@@ -15,6 +17,14 @@ my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 
 if my_font in font_list:
   st.write(my_font)
+
+# /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
+  
+temp = subprocess.call(["cp", "/usr/share/fonts/truetype/nanum/Nanum*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
+print(temp)
+
+# usr/share/fonts/truetype/nanum/NanumGothic.ttf
+# sudo cp /usr/share/fonts/truetype/nanum/Nanum* /usr/local/lib/python3.4/dist-packages/matplotlib/mpl-data/fonts/ttf/
 
 for my_font in fm.fontManager.ttflist:
   if 'Nanum' in my_font.name:
