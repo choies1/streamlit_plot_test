@@ -5,43 +5,21 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 import matplotlib.font_manager as fm
-
+from matplotlib import font_manager, rc
 import subprocess
 
-#print([f.fname for f in fm.fontManager.ttflist])
-
-# 설치된 폰트 출력
-# font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
-
-# my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
-
-# if my_font in font_list:
-#   st.write(my_font)
-
-# nanum_font_list = fm.findSystemFonts(fontpaths='/usr/share/fonts/truetype/nanum/')
-
-# for font in nanum_font_list:
-#     print(f"Name: {fm.FontProperties(fname=font).get_name()} | Path: {font}")
-    
-# /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
-  
-# temp = subprocess.call(["sudo", "cd", "/usr/share/fonts/truetype/nanum/"])
+# 설치된 나눔 폰트 출력
 print("--> font output test")
 
-temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
-print(temp)
-
-# temp = subprocess.call(["fc-cache","-fv"])
+# temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 # print(temp)
 
-# temp = subprocess.call(["cp", "/usr/share/fonts/truetype/nanum/Nanum*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
-# print(temp)
-# cp /usr/share/fonts/truetype/nanum/Nanum* /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf/
+font_path = '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'
 
-from matplotlib import font_manager, rc
-font_name = font_manager.FontProperties(fname='/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf').get_name()
+font_name = font_manager.FontProperties(fname=font_path).get_name()
 print("font_name", font_name)
-rc('font', family=font_name)
+# rc('font', family=font_name)
+matplotlib.rcParams['font.family'] = font_name
 
 
 # usr/share/fonts/truetype/nanum/NanumGothic.ttf
