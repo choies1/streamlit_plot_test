@@ -18,6 +18,11 @@ my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 if my_font in font_list:
   st.write(my_font)
 
+nanum_font_list = fm.findSystemFonts(fontpaths='/usr/share/fonts/truetype/nanum/')
+
+for font in font_list:
+    print(f"Name: {fm.FontProperties(fname=font).get_name()} | Path: {font}")
+    
 # /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
   
 temp = subprocess.call(["cp","-rf", "/usr/share/fonts/truetype/nanum/*.*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
