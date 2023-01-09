@@ -6,6 +6,8 @@ import matplotlib
 
 import matplotlib.font_manager as fm
 
+print([f.fname for f in fm.fontManager.ttflist])
+
 # path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 # fontprop = fm.FontProperties(fname=path)
 
