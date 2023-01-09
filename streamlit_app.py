@@ -29,7 +29,7 @@ for font in nanum_font_list:
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 print(temp)
 
-# temp = subprocess.call(["cp","-rf", "/usr/share/fonts/truetype/nanum/*.*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
+temp = subprocess.call(["su", "cp","-rf", "/usr/share/fonts/truetype/nanum/*.*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
 # print(temp)
 
 # usr/share/fonts/truetype/nanum/NanumGothic.ttf
