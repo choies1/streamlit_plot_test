@@ -8,7 +8,8 @@ import matplotlib.font_manager as fm
 from matplotlib import font_manager, rc
 import subprocess
 
-st.title('Streamlit cloud에서 matplotlib 이용할 때 그래프에서 한글 표시 방법')
+st.title('matplotlib 그래프에서 한글 폰트 설정 방법')
+st.write('Streamlit cloud에서 matplotlib 이용할 때 한글 폰트를 사용한 예입니다.')
 
 # 설치된 나눔 폰트 출력
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
