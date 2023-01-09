@@ -22,7 +22,7 @@ if my_font in font_list:
 # path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 # fontprop = fm.FontProperties(fname=path)
 
-matplotlib.rcParams['font.family'] = 'NanumGothicCoding'
+matplotlib.rcParams['font.family'] = 'NanumGothic'
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 st.title('Streamlit matplotlib 이용 그래프에서 한글 표시 방법')
