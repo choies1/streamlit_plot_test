@@ -8,8 +8,12 @@ import matplotlib.font_manager as fm
 
 #print([f.fname for f in fm.fontManager.ttflist])
 
-for font in fm.fontManager.ttflist:
-  print(font.fname)
+# 설치된 폰트 출력
+font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
+st.write(font_list)
+
+# for font in fm.fontManager.ttflist:
+#   print(font.fname)
 
 # path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 # fontprop = fm.FontProperties(fname=path)
