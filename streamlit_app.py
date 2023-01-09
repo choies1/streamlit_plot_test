@@ -16,7 +16,9 @@ st.write("설치된 나눔 폰트 출력")
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 st.write(temp)
 
-font_path = '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'
+# font_path = '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'
+font_path = '/usr/share/fonts/truetype/nanum/NanumGothicCoding.ttf'
+
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 st.write("font_name:", font_name)
 
