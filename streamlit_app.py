@@ -35,7 +35,7 @@ df = pd.DataFrame(a)
 # plt.rcParams["font.family"] = 'NanumGothic'
 
 ax = df.plot(grid=True, figsize=(15, 5))
-ax.set_title("주가(종가) 그래프", fontsize=30) # 그래프 제목을 지정
+ax.set_title("주가(종가) 그래프2", fontsize=30) # 그래프 제목을 지정
 ax.set_xlabel("기간", fontsize=20)             # x축 라벨을 지정
 ax.set_ylabel("주가(원)", fontsize=20)         # y축 라벨을 지정
 plt.xticks(fontsize=15)                    # X축 눈금값의 폰트 크기 지정
