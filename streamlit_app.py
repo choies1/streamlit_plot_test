@@ -10,7 +10,11 @@ import matplotlib.font_manager as fm
 
 # 설치된 폰트 출력
 font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
-st.write(font_list)
+
+my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
+
+if my_font in font_list:
+  st.write(my_font)
 
 # for font in fm.fontManager.ttflist:
 #   print(font.fname)
