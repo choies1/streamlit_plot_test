@@ -20,7 +20,7 @@ if my_font in font_list:
 
 # /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
   
-temp = subprocess.call(["cp", "/usr/share/fonts/truetype/nanum/Nanum*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
+temp = subprocess.call(["cp","-rf", "/usr/share/fonts/truetype/nanum/*.*", "/home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/"])
 print(temp)
 
 # usr/share/fonts/truetype/nanum/NanumGothic.ttf
