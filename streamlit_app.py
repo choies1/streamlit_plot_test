@@ -20,7 +20,6 @@ print(temp)
 font_path = '/usr/share/fonts/truetype/nanum/NanumGothicCoding.ttf'
 font_name = fm.FontProperties(fname=font_path).get_name()
 st.write("font_name:", font_name)
-# rc('font', family=font_name)
 
 matplotlib.rcParams['font.family'] = font_name
 matplotlib.rcParams['axes.unicode_minus'] = False
