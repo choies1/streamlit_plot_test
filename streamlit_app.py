@@ -9,13 +9,12 @@ from matplotlib import font_manager, rc
 import subprocess
 
 # 설치된 나눔 폰트 출력
-print("--> font output test")
+print("--> font output test2")
 
 # temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 # print(temp)
 
 font_path = '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'
-
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 print("font_name", font_name)
 # rc('font', family=font_name)
