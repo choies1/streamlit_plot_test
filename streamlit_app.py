@@ -8,18 +8,16 @@ import matplotlib.font_manager as fm
 from matplotlib import font_manager, rc
 import subprocess
 
-st.title('Streamlit matplotlib 이용 그래프에서 한글 표시 방법')
+st.title('Streamlit cloud에서 matplotlib 이용할 때 그래프에서 한글 표시 방법')
 
 # 설치된 나눔 폰트 출력
-st.write("설치된 나눔 폰트 출력")
-
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 print(temp)
 
 # font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
 font_path = '/usr/share/fonts/truetype/nanum/NanumGothicCoding.ttf'
 font_name = fm.FontProperties(fname=font_path).get_name()
-st.write("font_name:", font_name)
+st.write("사용할 폰트 이름:", font_name)
 
 matplotlib.rcParams['font.family'] = font_name
 matplotlib.rcParams['axes.unicode_minus'] = False
