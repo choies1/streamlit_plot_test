@@ -26,6 +26,8 @@ import subprocess
 # /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
   
 # temp = subprocess.call(["sudo", "cd", "/usr/share/fonts/truetype/nanum/"])
+print("--> font output")
+
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 print(temp)
 
@@ -45,14 +47,13 @@ rc('font', family=font_name)
 # usr/share/fonts/truetype/nanum/NanumGothic.ttf
 # sudo cp /usr/share/fonts/truetype/nanum/Nanum* /usr/local/lib/python3.4/dist-packages/matplotlib/mpl-data/fonts/ttf/
 
-for my_font in fm.fontManager.ttflist:
-  if 'Nanum' in my_font.name:
-    st.write(my_font)
+# for my_font in fm.fontManager.ttflist:
+#   if 'Nanum' in my_font.name:
+#     st.write(my_font)
   
 # for font in fm.fontManager.ttflist:
 #   print(font.fname)
 
-# path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 # fontprop = fm.FontProperties(fname=path)
 
 # matplotlib.rcParams['font.family'] = 'NanumGothic'
