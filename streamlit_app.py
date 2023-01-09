@@ -26,7 +26,7 @@ import subprocess
 # /home/appuser/venv/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
   
 # temp = subprocess.call(["sudo", "cd", "/usr/share/fonts/truetype/nanum/"])
-print("--> font output")
+print("--> font output test")
 
 temp = subprocess.call(["ls","-al", "/usr/share/fonts/truetype/nanum/"])
 print(temp)
