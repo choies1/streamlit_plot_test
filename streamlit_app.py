@@ -16,8 +16,9 @@ my_font = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 if my_font in font_list:
   st.write(my_font)
 
-for my_font in fm.fontManager.ttflist if 'Nanum' in f.name
-  st.write(my_font)
+for my_font in fm.fontManager.ttflist:
+  if 'Nanum' in f.name:
+    st.write(my_font)
   
 # for font in fm.fontManager.ttflist:
 #   print(font.fname)
