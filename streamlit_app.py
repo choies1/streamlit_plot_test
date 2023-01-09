@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+import matplotlib
 
 import matplotlib.font_manager as fm
+
 path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 fontprop = fm.FontProperties(fname=path)
 
